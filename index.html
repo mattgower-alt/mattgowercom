@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Matt Gower's Website</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Luckiest+Guy&display=swap');
+
+  body {
+    background-color: #000;
+    background-image: radial-gradient(circle, #444 1px, transparent 1px),
+                       radial-gradient(circle, #ffff99 1px, transparent 1px);
+    background-size: 40px 40px, 40px 40px;
+    background-position: 0 0, 20px 20px;
+    color: #fff;
+    font-family: 'Comic Neue', cursive, sans-serif;
+    margin: 0;
+    text-align: center;
+  }
+
+  .content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px 40px 20px;
+  }
+
+  .welcome {
+    font-size: 22px;
+    font-weight: bold;
+    color: #00ff00;
+    letter-spacing: 4px;
+    text-shadow: 0 0 6px #00ff00;
+  }
+
+  .star {
+    font-size: 28px;
+    color: gold;
+    vertical-align: middle;
+  }
+
+  h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 64px;
+    color: #ff66cc;
+    text-shadow:
+      2px 2px 0 #33cc66,
+      -2px -2px 0 #33cc66,
+      2px -2px 0 #33cc66,
+      -2px 2px 0 #33cc66,
+      4px 4px 8px rgba(0,0,0,0.6);
+    margin: 10px 0 30px 0;
+    letter-spacing: 2px;
+  }
+
+  hr.divider {
+    border: none;
+    height: 4px;
+    background: linear-gradient(to right, #ff00ff, #00ffff);
+    margin: 30px auto;
+    width: 100%;
+  }
+
+  .hi-text {
+    font-size: 20px;
+    margin: 30px 0;
+  }
+
+  .contact-btn {
+    display: inline-block;
+    background-color: #ff33ff;
+    color: #ffff00;
+    font-weight: bold;
+    font-size: 22px;
+    padding: 20px 50px;
+    border: 4px solid #ff99cc;
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 2px #cc00cc, 4px 4px 10px rgba(0,0,0,0.6);
+    text-decoration: none;
+    font-family: 'Luckiest Guy', cursive;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin: 20px 0 40px 0;
+  }
+
+  .contact-btn:hover {
+    background-color: #ff66ff;
+  }
+
+  .visitor-label {
+    color: #ccc;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .counter {
+    display: inline-block;
+    background: #000066;
+    border: 3px solid #999;
+    color: #33ff33;
+    font-family: 'Courier New', monospace;
+    font-size: 22px;
+    letter-spacing: 6px;
+    padding: 8px 20px;
+  }
+
+  footer {
+    background: #000066;
+    border-top: 6px solid #ffff00;
+    padding: 20px 0 10px 0;
+    margin-top: 60px;
+  }
+
+  .diamonds {
+    color: #33cccc;
+    letter-spacing: 10px;
+    font-size: 14px;
+  }
+
+  .dashed {
+    border: none;
+    border-top: 3px dashed #cc33ff;
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .copyright {
+    color: #ffff33;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 10px 0 4px 0;
+  }
+
+  .viewed-in {
+    color: #ff6699;
+    font-size: 13px;
+    margin: 4px 0;
+  }
+
+  .under-construction {
+    font-size: 13px;
+    margin: 4px 0 10px 0;
+  }
+  .under-construction .label {
+    color: #33ff33;
+  }
+  .under-construction .caps {
+    color: #ff9900;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+  <div class="content">
+    <div class="welcome"><span class="star">&#9733;</span> *** WELCOME *** <span class="star">&#9733;</span></div>
+    <h1>MATT GOWER'S WEBSITE</h1>
+
+    <hr class="divider">
+
+    <div class="hi-text">Hi! I'm Matt.</div>
+
+    <a href="mailto:matthew.gower@maxio.com" class="contact-btn">&#128231; CONTACT ME &#128231;</a>
+
+    <hr class="divider">
+
+    <div class="visitor-label">You are visitor number:</div>
+    <div class="counter" id="counter">00042</div>
+  </div>
+
+  <footer>
+    <div class="diamonds">&#9830; &#9830; &#9830; &#9830; &#9830; &#9830; &#9830; &#9830; &#9830; &#9830; &#9830; &#9830; &#9830; &#9830; &#9830;</div>
+    <div class="copyright">&copy; 2026 Matt Gower. All Rights Reserved.</div>
+    <div class="viewed-in">Best viewed in Internet Explorer 6 at 800x600 resolution</div>
+    <div class="under-construction">
+      <span class="label">This page is </span><span class="caps">UNDER CONSTRUCTION</span> &#128679;
+    </div>
+    <hr class="dashed">
+    <div class="diamonds">&#9830; &#9830; &#9830; &#9830; &#9830; &#9830; &#9830; &#9830; &#9830; &#9830; &#9830; &#9830; &#9830; &#9830; &#9830;</div>
+  </footer>
+
+  <script>
+    // increment the visitor counter each time the page loads, stored client-side only
+    (function() {
+      var key = 'geocities_visitor_count';
+      var count = parseInt(localStorage.getItem(key) || '42', 10);
+      count += 1;
+      localStorage.setItem(key, count);
+      document.getElementById('counter').textContent = String(count).padStart(5, '0');
+    })();
+  </script>
+
+</body>
+</html>
